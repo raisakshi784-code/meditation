@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Yog-Guru</title>
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background-image: url("BG2.avif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;   
+      object-fit: cover;    
+    }
+    .contact-box {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="iconY.PNG" alt="Logo" class="logo">
+      <span class="Yoga-line fw-bold">Yog-Guru</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="read_more2.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contus.html">Contact-Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dow.html">Registration</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5 py-4">
+  <div class="contact-box mx-auto" style="max-width: 900px;">
+    <div class="row g-5">
+      <div class="col-md-6 border-end">
+        <h2 class="fw-bold text-primary mb-4">Meditation Center</h2>
+        <p class="fs-5 mb-3"><i class="bi bi-geo-alt"></i> Varanasi, Uttar Pradesh, India</p>
+        <p class="fs-5 mb-3"><i class="bi bi-telephone"></i> +91-7991828518</p>
+        <p class="fs-5 mb-3"><i class="bi bi-envelope"></i> raisakshi784@gmail.com</p>
+        <p class="text-muted mt-4">Feel free to send questions regarding our meditation classes, daily yoga routines, or instructor consultations.</p>
+      </div>
+
+      <div class="col-md-6">
+        <h3 class="fw-bold mb-4">Send us a Message</h3>
+        <form id="contactForm">
+          <div class="mb-3">
+            <label class="form-label fw-bold">Name:</label>
+            <input type="text" class="form-control" id="contactName" placeholder="Enter your full name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold">Email:</label>
+            <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email address" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-bold">Message:</label>
+            <textarea class="form-control" id="contactMsg" rows="4" placeholder="Enter your query or message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary px-4 py-2">Submit Message</button>
+        </form>
+        <div id="contactSuccess" class="alert alert-success mt-3 d-none">
+          Thank you! Your message has been received. Our team will get back to you shortly.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container my-5 p-4 footer-glass text-white bg-dark shadow-sm text-center">
+  <div class="footer fs-5">Meditation.com © 2026 Sakshi Rai. <a href="#" class="text-info text-decoration-none">· Privacy · Terms</a></div>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('contactSuccess').classList.remove('d-none');
+  this.reset();
+});
+</script>
+</body>
+</html>
